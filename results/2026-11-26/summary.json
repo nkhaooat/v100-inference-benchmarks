@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "snapshot": "2026-11-26",
+  "publication_scope": "Curated aggregate results; private fixtures and raw responses are not included. No new inference was run to generate this snapshot.",
+  "hardware": {
+    "cpu": "Ryzen 9 7945HX3D",
+    "ram_installed_gib": 96,
+    "ram_linux_visible_gib_approx": 93.5,
+    "gpus": [
+      "V100 PCIe 32 GB",
+      "V100 SXM2 32 GB"
+    ]
+  },
+  "campaigns": [
+    {
+      "id": "flash-next-initial",
+      "source": {
+        "archive_record": "2026-11-25-sfnx-mtp8-benchmark/final-comparison.json",
+        "sha256": "acadda0d6b01fe0bde0ac7585306fa25b1d9fe3f9943d5be6ce48ae4b5464b5e"
+      },
+      "scope": "Historical configurations; target quantization, dates and draft settings differ.",
+      "arms": [
+        {
+          "id": "strata_saved",
+          "passed": 863,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 368,
+              "graded": 400,
+              "executed": 400,
+              "capped_status_count": 0
+            },
+            "humaneval": {
+              "passed": 323,
+              "graded": 328,
+              "executed": 328,
+              "capped_status_count": 2
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped_status_count": 0
+            },
+            "concurrency": {
+              "passed": 16,
+              "graded": 16,
+              "executed": 16,
+              "capped_status_count": 0
+            },
+            "tools_protocol": {
+              "passed": 150,
+              "graded": 216,
+              "executed": 224,
+              "capped_status_count": 0
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 76.22746035048985,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 85.19,
+              "mean_elapsed_s": 8.65
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 93.34,
+              "mean_elapsed_s": 11.26
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 67.19,
+              "mean_elapsed_s": 15.65
+            },
+            "fresh_35k": {
+              "mean_prefill_tokens_s": 653.5,
+              "mean_ttft_s": 54.85
+            }
+          }
+        },
+        {
+          "id": "lapilli_mtp8",
+          "passed": 858,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 361,
+              "graded": 400,
+              "executed": 400,
+              "capped_status_count": 0
+            },
+            "humaneval": {
+              "passed": 319,
+              "graded": 328,
+              "executed": 328,
+              "capped_status_count": 7
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped_status_count": 0
+            },
+            "concurrency": {
+              "passed": 15,
+              "graded": 16,
+              "executed": 16,
+              "capped_status_count": 0
+            },
+            "tools_protocol": {
+              "passed": 157,
+              "graded": 216,
+              "executed": 224,
+              "capped_status_count": 0
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 101.52834575898905,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 149.6,
+              "mean_elapsed_s": 5.35
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 118.33,
+              "mean_elapsed_s": 8.95
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 79.45,
+              "mean_elapsed_s": 13.48
+            },
+            "fresh_35k": {
+              "mean_prefill_tokens_s": 1449.75,
+              "mean_ttft_s": 24.81
+            }
+          }
+        },
+        {
+          "id": "sfnx_dflash2",
+          "passed": 853,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 368,
+              "graded": 400,
+              "executed": 400
+            },
+            "humaneval": {
+              "passed": 313,
+              "graded": 328,
+              "executed": 328
+            },
+            "long_context": {
+              "passed": 5,
+              "graded": 6,
+              "executed": 6
+            },
+            "concurrency": {
+              "passed": 13,
+              "graded": 16,
+              "executed": 16
+            },
+            "tools_protocol": {
+              "passed": 154,
+              "graded": 216,
+              "executed": 224
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 84.69319781961788,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 106.37275839244751,
+              "mean_elapsed_s": 9.1567834614998
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 100.4137254271948,
+              "mean_elapsed_s": 11.340466431499408
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 82.52866464135326,
+              "mean_elapsed_s": 13.960407409999789
+            },
+            "fresh_35k": {
+              "mean_prompt_tokens": 35803,
+              "mean_prefill_tokens_s": 2020.2,
+              "mean_ttft_s": 17.84359613650031
+            },
+            "fresh_prefill": {
+              "128": {
+                "mean_prompt_tokens": 2114,
+                "mean_prefill_tokens_s": 776.25,
+                "mean_ttft_s": 2.8557072104995314
+              },
+              "512": {
+                "mean_prompt_tokens": 8642,
+                "mean_prefill_tokens_s": 1317.15,
+                "mean_ttft_s": 6.664853265000602
+              },
+              "2048": {
+                "mean_prompt_tokens": 35803,
+                "mean_prefill_tokens_s": 2020.2,
+                "mean_ttft_s": 17.84359613650031
+              }
+            }
+          }
+        },
+        {
+          "id": "sfnx_mtp8",
+          "passed": 851,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 366,
+              "graded": 400,
+              "executed": 400
+            },
+            "humaneval": {
+              "passed": 314,
+              "graded": 328,
+              "executed": 328
+            },
+            "long_context": {
+              "passed": 4,
+              "graded": 6,
+              "executed": 6
+            },
+            "concurrency": {
+              "passed": 14,
+              "graded": 16,
+              "executed": 16
+            },
+            "tools_protocol": {
+              "passed": 153,
+              "graded": 216,
+              "executed": 224
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 87.69191116001633,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 111.54965870745755,
+              "mean_elapsed_s": 8.771158920500966
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 102.47449053773116,
+              "mean_elapsed_s": 9.95101339699977
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 95.32385609315068,
+              "mean_elapsed_s": 12.286054881000382
+            },
+            "fresh_35k": {
+              "mean_prompt_tokens": 35803,
+              "mean_prefill_tokens_s": 2057.6,
+              "mean_ttft_s": 17.45980771699942
+            },
+            "fresh_prefill": {
+              "128": {
+                "mean_prompt_tokens": 2114,
+                "mean_prefill_tokens_s": 795.05,
+                "mean_ttft_s": 2.7199826524993114
+              },
+              "512": {
+                "mean_prompt_tokens": 8642,
+                "mean_prefill_tokens_s": 1341.75,
+                "mean_ttft_s": 6.48603131299933
+              },
+              "2048": {
+                "mean_prompt_tokens": 35803,
+                "mean_prefill_tokens_s": 2057.6,
+                "mean_ttft_s": 17.45980771699942
+              }
+            }
+          }
+        },
+        {
+          "id": "lapilli_mtp4",
+          "passed": 841,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 357,
+              "graded": 400,
+              "executed": 400,
+              "capped_status_count": 4
+            },
+            "humaneval": {
+              "passed": 316,
+              "graded": 328,
+              "executed": 328,
+              "capped_status_count": 9
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped_status_count": 0
+            },
+            "concurrency": {
+              "passed": 15,
+              "graded": 16,
+              "executed": 16,
+              "capped_status_count": 0
+            },
+            "tools_protocol": {
+              "passed": 147,
+              "graded": 216,
+              "executed": 224,
+              "capped_status_count": 0
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 105.38392776220533,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 141.6,
+              "mean_elapsed_s": 5.52
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 109.56,
+              "mean_elapsed_s": 9.68
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 78.63,
+              "mean_elapsed_s": 13.66
+            },
+            "fresh_35k": {
+              "mean_prefill_tokens_s": 1444.9,
+              "mean_ttft_s": 24.87
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "lapilli-deepseek",
+      "source": {
+        "archive_record": "2026-11-25-lapilli-deepseek/final-comparison.json",
+        "sha256": "bd55cbde748c40c1d2837fec178f3b3be42c19532633ec11218f7531bc1d2fd8"
+      },
+      "scope": "Family-native sampling; Nace used a qualified router patch.",
+      "arms": [
+        {
+          "id": "nace",
+          "passed": 837,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 314,
+              "graded": 400,
+              "executed": 400,
+              "capped": 3
+            },
+            "humaneval": {
+              "passed": 313,
+              "graded": 328,
+              "executed": 328,
+              "capped": 3
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped": 0
+            },
+            "concurrency": {
+              "passed": 14,
+              "graded": 16,
+              "executed": 16,
+              "capped": 0
+            },
+            "tools_protocol": {
+              "passed": 190,
+              "graded": 216,
+              "executed": 224,
+              "capped": 0
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 54.08011698223769,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 86.88169815050898,
+              "mean_elapsed_s": 10.335070738001377
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 74.3484964650155,
+              "mean_elapsed_s": 14.398859413002356
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 47.973676729412404,
+              "mean_elapsed_s": 22.516007853497285
+            },
+            "fresh_prefill": {
+              "128": {
+                "mean_prompt_tokens": 1826,
+                "mean_prefill_tokens_s": 241.4,
+                "mean_ttft_s": 7.671654553498229
+              },
+              "512": {
+                "mean_prompt_tokens": 7202,
+                "mean_prefill_tokens_s": 392.75,
+                "mean_ttft_s": 18.503507016499498
+              },
+              "2048": {
+                "mean_prompt_tokens": 29755,
+                "mean_prefill_tokens_s": 491.70000000000005,
+                "mean_ttft_s": 60.742669428003865
+              }
+            }
+          }
+        },
+        {
+          "id": "ista",
+          "passed": 815,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 313,
+              "graded": 400,
+              "executed": 400,
+              "capped": 2
+            },
+            "humaneval": {
+              "passed": 309,
+              "graded": 328,
+              "executed": 328,
+              "capped": 1
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped": 0
+            },
+            "concurrency": {
+              "passed": 12,
+              "graded": 16,
+              "executed": 16,
+              "capped": 0
+            },
+            "tools_protocol": {
+              "passed": 175,
+              "graded": 216,
+              "executed": 224,
+              "capped": 0
+            }
+          },
+          "speed": {
+            "two_client_aggregate_tokens_s": 65.80339965716146,
+            "edit1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 96.95959153144666,
+              "mean_elapsed_s": 10.445138809503987
+            },
+            "code1": {
+              "runs": 2,
+              "mean_decode_tokens_s": 86.01548201317422,
+              "mean_elapsed_s": 12.659266952501639
+            },
+            "prose2": {
+              "runs": 2,
+              "mean_decode_tokens_s": 61.78488654430826,
+              "mean_elapsed_s": 18.175142799998866
+            },
+            "fresh_prefill": {
+              "128": {
+                "mean_prompt_tokens": 1826,
+                "mean_prefill_tokens_s": 237.95,
+                "mean_ttft_s": 7.981980824999482
+              },
+              "512": {
+                "mean_prompt_tokens": 7202,
+                "mean_prefill_tokens_s": 480.70000000000005,
+                "mean_ttft_s": 15.246629832498002
+              },
+              "2048": {
+                "mean_prompt_tokens": 29755,
+                "mean_prefill_tokens_s": 632.5999999999999,
+                "mean_ttft_s": 47.27385539500028
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "flash-next-q8-engram",
+      "source": {
+        "archive_record": "2026-11-25-flash-next-q8-engram/final-comparison.json",
+        "sha256": "3f9985d6bf94e240bf3c8413237016121b8f76ffd198540bd89ada6853b43c69"
+      },
+      "scope": "Shared Q4_K_XL backbone family and Q8 n-gram payload; not complete engine numerical parity.",
+      "suite_sha256": "fc12c4f94c3c8b41a1e71df77a9f700293472bb06c4925a14d8ba561170bb4ef",
+      "q8_payload_sha256": "91743e33b6de2272b50a6269a6fe692f56244946fdecf19ca1eba0ba640b303f",
+      "arms": [
+        {
+          "id": "strata-dflash2-q4",
+          "passed": 864,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 366,
+              "graded": 400,
+              "executed": 400,
+              "capped": 2
+            },
+            "humaneval": {
+              "passed": 316,
+              "graded": 328,
+              "executed": 328,
+              "capped": 8
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped": 0
+            },
+            "concurrency": {
+              "passed": 16,
+              "graded": 16,
+              "executed": 16,
+              "capped": 0
+            },
+            "tools_protocol": {
+              "passed": 160,
+              "graded": 216,
+              "executed": 224,
+              "capped": 0
+            }
+          },
+          "speed": {
+            "edit1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 59.53974256965046,
+              "ttft_s_mean": 1.3899178204956115
+            },
+            "code1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 77.1070098492761,
+              "ttft_s_mean": 0.29438758600736037
+            },
+            "code1-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 50.13839997837999,
+              "ttft_s_mean": 0.6235385019972455
+            },
+            "prose2-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 61.447384068404624,
+              "ttft_s_mean": 0.50063235599373
+            },
+            "prose2-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 37.770105788102455,
+              "ttft_s_mean": 0.09466484699805733
+            },
+            "two_client_aggregate_tokens_s": 74.88526979376587,
+            "fresh_prefill": {
+              "128": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 280.5,
+                "mean_ttft_s": 7.608830938501342
+              },
+              "512": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 358.35,
+                "mean_ttft_s": 24.186556060500152
+              },
+              "2048": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 383.8,
+                "mean_ttft_s": 93.37093334200472
+              }
+            }
+          },
+          "pins": {
+            "binary_sha256": "5727f8eb5d51b4022b83aeaa5757d55f543ee25a3834e79a9e7cac515d65f51f",
+            "config_sha256": "180f54fd04485b913dbb6736028fdd58b42b6cb29d8078c79bef6bc82e472e55"
+          }
+        },
+        {
+          "id": "lapilli-mtp8",
+          "passed": 860,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 363,
+              "graded": 400,
+              "executed": 400,
+              "capped": 0
+            },
+            "humaneval": {
+              "passed": 316,
+              "graded": 328,
+              "executed": 328,
+              "capped": 9
+            },
+            "long_context": {
+              "passed": 5,
+              "graded": 6,
+              "executed": 6,
+              "capped": 0
+            },
+            "concurrency": {
+              "passed": 16,
+              "graded": 16,
+              "executed": 16,
+              "capped": 0
+            },
+            "tools_protocol": {
+              "passed": 160,
+              "graded": 216,
+              "executed": 224,
+              "capped": 0
+            }
+          },
+          "speed": {
+            "edit1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 146.15506511385098,
+              "ttft_s_mean": 0.7573081625014311
+            },
+            "code1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 117.63797958024833,
+              "ttft_s_mean": 0.24971187299888697
+            },
+            "code1-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 79.49135031249227,
+              "ttft_s_mean": 0.3486917159971199
+            },
+            "prose2-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 78.77780732604202,
+              "ttft_s_mean": 0.5470492345011735
+            },
+            "prose2-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 54.4160540567436,
+              "ttft_s_mean": 1.0218040040053893
+            },
+            "two_client_aggregate_tokens_s": 102.43088232715087,
+            "fresh_prefill": {
+              "128": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 700.05,
+                "mean_ttft_s": 3.1279969884999446
+              },
+              "512": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 881.9,
+                "mean_ttft_s": 9.879237196000759
+              },
+              "2048": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 1452.6999999999998,
+                "mean_ttft_s": 24.732492649996857
+              }
+            }
+          },
+          "pins": {
+            "binary_sha256": "42c67d9e1b7e9776823a0fb904bde4d5ae29072be5fe6a1b5aac7a31369224eb",
+            "config_sha256": "c808df9e23e96caebc55273bed6d509efed51c295e452e91968e6df8cd7521ad"
+          }
+        },
+        {
+          "id": "sfnx-dflash2",
+          "passed": 858,
+          "graded": 966,
+          "groups": {
+            "local": {
+              "passed": 365,
+              "graded": 400,
+              "executed": 400,
+              "capped": 0
+            },
+            "humaneval": {
+              "passed": 314,
+              "graded": 328,
+              "executed": 328,
+              "capped": 9
+            },
+            "long_context": {
+              "passed": 6,
+              "graded": 6,
+              "executed": 6,
+              "capped": 0
+            },
+            "concurrency": {
+              "passed": 14,
+              "graded": 16,
+              "executed": 16,
+              "capped": 1
+            },
+            "tools_protocol": {
+              "passed": 159,
+              "graded": 216,
+              "executed": 224,
+              "capped": 0
+            }
+          },
+          "speed": {
+            "edit1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 107.68729398175077,
+              "ttft_s_mean": 3.1578485229983926
+            },
+            "code1-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 101.28525207186613,
+              "ttft_s_mean": 1.135577650500636
+            },
+            "code1-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 73.18837785392616,
+              "ttft_s_mean": 1.6903042339981766
+            },
+            "prose2-c1": {
+              "runs": 2,
+              "stream_decode_tok_s_mean": 84.05322117284058,
+              "ttft_s_mean": 1.4919167494990688
+            },
+            "prose2-c2": {
+              "runs": 1,
+              "stream_decode_tok_s_mean": 46.47548431934332,
+              "ttft_s_mean": 2.656926742005453
+            },
+            "two_client_aggregate_tokens_s": 82.39822753958471,
+            "fresh_prefill": {
+              "128": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 785.15,
+                "mean_ttft_s": 2.82635449949521
+              },
+              "512": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 1339.5,
+                "mean_ttft_s": 6.56084483000086
+              },
+              "2048": {
+                "runs": 2,
+                "mean_prompt_tokens_s": 2060.1000000000004,
+                "mean_ttft_s": 17.49799176149827
+              }
+            }
+          },
+          "pins": {
+            "binary_sha256": "3d23d6efe68934cf7f399ae8065463363010393756913c1c65544491028b34f1",
+            "config_sha256": "69bee31c209ac398ecf51850cc4b679ce840372a92003ab2c42e3e3a6724f56a"
+          }
+        }
+      ],
+      "paired": [
+        {
+          "left": "lapilli-mtp8",
+          "right": "sfnx-dflash2",
+          "both_passed": 836,
+          "both_failed": 84,
+          "left_only_passed": 24,
+          "right_only_passed": 22
+        },
+        {
+          "left": "lapilli-mtp8",
+          "right": "strata-dflash2-q4",
+          "both_passed": 841,
+          "both_failed": 83,
+          "left_only_passed": 19,
+          "right_only_passed": 23
+        },
+        {
+          "left": "sfnx-dflash2",
+          "right": "strata-dflash2-q4",
+          "both_passed": 834,
+          "both_failed": 78,
+          "left_only_passed": 24,
+          "right_only_passed": 30
+        }
+      ]
+    }
+  ],
+  "parser_replay": {
+    "source": {
+      "archive_record": "2026-11-26-tool-protocol-investigation/sfnx-candidate-raw-replay.json",
+      "sha256": "3a154d1926f99c8d8ca26795261daa6a2c333cd3b0105d37c398ed2e54d9af95"
+    },
+    "counts": {
+      "trials": 216,
+      "responses": 351,
+      "responses_with_multiple_raw_records": 0,
+      "changed_responses": 8,
+      "changed_previously_passing_responses": 0,
+      "chunk_invariance_checks": 702
+    },
+    "native_qualification": {
+      "source": {
+        "archive_record": "2026-11-26-tool-protocol-investigation/sfnx-serving-fix-report.json",
+        "sha256": "9a5db5bf788053a7a4bfed323b6afad9873aa9c17794c77fbdf2b2172f55b506"
+      },
+      "executed": 32,
+      "graded": 32,
+      "strict_passed": 32
+    },
+    "scope": "Parser replay and targeted native qualification; original full-suite grades are unchanged."
+  }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.private.*
+raw/
+private/
+local-results/
+*.log
+*.token
+*.gguf
+*.basalt
+*.pack

@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "campaign": "flash-next-q8-engram",
+  "source": {
+    "archive_record": "2026-11-25-flash-next-q8-engram/benchmark-pins.json",
+    "sha256": "e1f19bd9e35f50551fb5e17622839ce2ca1d8c4a1d6adce373e1dc128e1f66f3"
+  },
+  "scope": "Selected parameter references, not executable engine configs. Original config digests identify the private records, not this transformed file.",
+  "max_context_tokens": 262144,
+  "parallel_slots": 2,
+  "sampling": {
+    "nonthinking": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 1.5,
+      "frequency_penalty": 0.0,
+      "repetition_penalty": 1.0
+    },
+    "thinking": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "repetition_penalty": 1.0
+    }
+  },
+  "arms": [
+    {
+      "id": "lapilli-mtp8",
+      "original_config_sha256": "c808df9e23e96caebc55273bed6d509efed51c295e452e91968e6df8cd7521ad",
+      "engine": {
+        "mmap-experts": true,
+        "resident-experts": true,
+        "peer-exclusive": true,
+        "ram-reserve-mib": 20480,
+        "vram-reserve-mib": 2400,
+        "prompt-cache": 6,
+        "conversation-cache-mib": 4096,
+        "conversation-cache-slots": 24,
+        "conversation-cache-min-free-mib": 4096,
+        "conversation-cache-min-tokens": 2048,
+        "conversation-cache-disk-mib": 8192,
+        "kv-resident": 20480,
+        "ple-io": "direct",
+        "ple-row-cache": 1048576,
+        "spec": 8
+      },
+      "kv": "int8",
+      "environment": {}
+    },
+    {
+      "id": "sfnx-dflash2",
+      "original_config_sha256": "69bee31c209ac398ecf51850cc4b679ce840372a92003ab2c42e3e3a6724f56a",
+      "engine": {
+        "draft": "dflash2",
+        "spec": "4",
+        "lookup": "4",
+        "max-context": "262144",
+        "conversation-cache-mib": "0",
+        "batch": "2"
+      },
+      "environment": {
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "FNX_NGRAM": "disk",
+        "FNX_NGRAM_CACHE_MIB": "64",
+        "FNX_RING_F32": "1",
+        "FNX_ARENA_RESERVE_MIB": "700",
+        "FNX_DF2_CONF": "0",
+        "FNX_DF2_TRACE": "0"
+      }
+    },
+    {
+      "id": "strata-dflash2-q4",
+      "original_config_sha256": "180f54fd04485b913dbb6736028fdd58b42b6cb29d8078c79bef6bc82e472e55",
+      "engine": {
+        "draft": "dflash2",
+        "spec": "4",
+        "max-context": "262144",
+        "conversation-cache-mib": "24576",
+        "kv": "int8",
+        "vram-reserve-mib": "2400",
+        "prefill": "1024",
+        "short-read": "64",
+        "kv-resident": "8192",
+        "conversation-cache-slots": "24"
+      },
+      "environment": {
+        "CUDA_DEVICE_ORDER": "PCI_BUS_ID",
+        "STRATA_PF_W16_CACHE_MIB": "0",
+        "STRATA_BATCH_DF2": "1"
+      }
+    }
+  ]
+}
