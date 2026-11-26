@@ -1,6 +1,6 @@
 # V100 configuration comparison, November 2026
 
-An independent local comparison evaluated Lapilli, sFNX and Strata on a Ryzen 9 7945HX3D with 96 GiB installed RAM and two V100 32 GB GPUs (one PCIe, one SXM2).
+An independent local comparison evaluated Lapilli, sFNX and Strata on a Ryzen 9 7945HX3D with 96 GiB installed RAM and two Tesla V100 32 GB PCIe cards on Gen3 x8 links (the second runs cross-flashed SXM2 VBIOS; same PCIe silicon and form factor), with peer-to-peer access enabled (IOMMU off, peer path verified per campaign).
 
 The closest model-payload match used the Q4_K_XL Flash-Next backbone family and an identical Q8 n-gram payload. Across 966 graded trials, Lapilli MTP8 passed 860, sFNX DFlash2 passed 858 and Strata DFlash2 Q4 passed 864. The small observed gaps come from one sampled suite; templates, packing, numerical execution, drafter and cache settings differed, so this does not isolate the quality effect of speculation.
 

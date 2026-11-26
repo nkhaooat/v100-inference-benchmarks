@@ -92,7 +92,10 @@ def main():
         "snapshot": "2026-11-26",
         "publication_scope": "Curated aggregate results; private fixtures and raw responses are not included. No new inference was run to generate this snapshot.",
         "hardware": {"cpu": "Ryzen 9 7945HX3D", "ram_installed_gib": 96,
-                     "ram_linux_visible_gib_approx": 93.5, "gpus": ["V100 PCIe 32 GB", "V100 SXM2 32 GB"]},
+                     "ram_linux_visible_gib_approx": 93.5,
+                     "gpus": ["V100 PCIe 32 GB (stock PCIe VBIOS)",
+                              "V100 32 GB PCIe card with cross-flashed SXM2 VBIOS"],
+                     "gpu_link": "PCIe Gen3 x8 per card; peer-to-peer enabled, AMD IOMMU off, peer path verified per campaign"},
         "campaigns": [
             {"id": "flash-next-initial", "source": source_earlier,
              "scope": "Historical configurations; target quantization, dates and draft settings differ.", "arms": earlier_arms},

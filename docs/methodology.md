@@ -2,7 +2,7 @@
 
 ## Hardware and campaign boundaries
 
-The November 24–26, 2026 campaigns used a Ryzen 9 7945HX3D, 96 GiB installed RAM (approximately 93.5 GiB visible to Linux after iGPU/system reservations), and two V100 32 GB GPUs: one PCIe and one SXM2. Each GPU arm ran separately from production inference.
+The November 24–26, 2026 campaigns used a Ryzen 9 7945HX3D, 96 GiB installed RAM (approximately 93.5 GiB visible to Linux after iGPU/system reservations), and two Tesla V100 32 GB cards on PCIe Gen3 x8 links: a stock PCIe card and a second PCIe card cross-flashed with SXM2 VBIOS, so software identifies it as SXM2 while the silicon, form factor and link are the same PCIe class. Peer-to-peer access was enabled with the AMD IOMMU off and re-verified by a peer gate inside the campaigns. The [report](reports/2026-11-26-v100-comparison.md) records those details. Each GPU arm ran separately from production inference.
 
 Launch limits varied: the initial Lapilli trials explicitly set an 80 GiB hard limit; the DeepSeek comparison used 78/82 GiB soft/hard limits; later sFNX, Q8 comparison and cache arms used 82/86 GiB. Storage placement also varied. The [report](reports/2026-11-26-v100-comparison.md) records those differences. The historical test settings are not a recommendation to raise limits on another machine.
 
